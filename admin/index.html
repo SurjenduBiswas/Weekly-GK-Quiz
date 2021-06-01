@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <style type="text/css" >
+            input, button, textarea{
+                margin: 10px;
+            }
+            input{
+                margin-left: 20px;
+            }
+            #loginDiv{
+                display: block;
+            }
+            #mainDiv{
+                display: none;
+            }
+            textarea{
+                width: 90%;
+            }
+            label.ql{
+                display: block;
+                margin-top: 30px;
+            }
+            p{
+                display: inline;
+                margin: 10px;
+            }
+            input[type=radio], label.al{
+                border: none;
+                padding: 0;
+                margin: 0;
+            }
+            
+            img[src="https://cdn.000webhost.com/000webhost/logo/footer-powered-by-000webhost-white2.png"]{
+                display: none;
+            }
+        </style>
+        <title>Admin | WGK</title>
+    </head>
+    <body>
+        <div id="loginDiv">
+            <h1>Admin Login:</h1>
+            <input type="text" name="username" id="username" placeholder="username" required/>
+            <input type="password" name="password" id="password" placeholder="password" required/>
+            <button onclick="login()">Login</button>
+        </div>
+        <div id="mainDiv">
+            <h1>Update the Quiz:</h1>
+            <form action="ar.php" method="post" accept-charset="utf-8">
+                <label class="ql" for="q1">Q1.</label><textarea name="q1" id="q1" rows="2" placeholder="Q1" required></textarea><br />
+                    <input type="text" name="a1_1" placeholder="Option A" /><br />
+                    <input type="text" name="a1_2" placeholder="Option B" /><br />
+                    <input type="text" name="a1_3" placeholder="Option C" /><br />
+                    <input type="text" name="a1_4" placeholder="Option D" /><br />
+                    <p>Right Answer:</p>
+                        <input type="radio" name="a1" id="a1_1" value="A"/><label class="al" for="a1_1">A</label>
+                        <input type="radio" name="a1" id="a1_2" value="B"/><label class="al" for="a1_2">B</label>
+                        <input type="radio" name="a1" id="a1_3" value="C"/><label class="al" for="a1_3">C</label>
+                        <input type="radio" name="a1" id="a1_4" value="D"/><label class="al" for="a1_4">D</label>
+                        
+                <label class="ql" for="q2">Q2.</label><textarea name="q2" id="q2" rows="2" placeholder="Q2" required></textarea><br />
+                    <input type="text" name="a2_1" placeholder="Option A" /><br />
+                    <input type="text" name="a2_2" placeholder="Option B" /><br />
+                    <input type="text" name="a2_3" placeholder="Option C" /><br />
+                    <input type="text" name="a2_4" placeholder="Option D" /><br />
+                    <p>Right Answer:</p>
+                        <input type="radio" name="a2" id="a2_1" value="A"/><label class="al" for="a2_1">A</label>
+                        <input type="radio" name="a2" id="a2_2" value="B"/><label class="al" for="a2_2">B</label>
+                        <input type="radio" name="a2" id="a2_3" value="C"/><label class="al" for="a2_3">C</label>
+                        <input type="radio" name="a2" id="a2_4" value="D"/><label class="al" for="a2_4">D</label>
+                
+                <label class="ql" for="q3">Q3.</label><textarea name="q3" id="q3" rows="2" placeholder="Q3"></textarea><br />
+                    <input type="text" name="a3_1" placeholder="Option A" /><br />
+                    <input type="text" name="a3_2" placeholder="Option B" /><br />
+                    <input type="text" name="a3_3" placeholder="Option C" /><br />
+                    <input type="text" name="a3_4" placeholder="Option D" /><br />
+                    <p>Right Answer:</p>
+                        <input type="radio" name="a3" id="a3_1" value="A"/><label class="al" for="a3_1">A</label>
+                        <input type="radio" name="a3" id="a3_2" value="B"/><label class="al" for="a3_2">B</label>
+                        <input type="radio" name="a3" id="a3_3" value="C"/><label class="al" for="a3_3">C</label>
+                        <input type="radio" name="a3" id="a3_4" value="D"/><label class="al" for="a3_4">D</label>
+                
+                <label class="ql" for="q4">Q4.</label><textarea name="q4" id="q4" rows="2" placeholder="Q4"></textarea><br />
+                    <input type="text" name="a4_1" placeholder="Option A" /><br />
+                    <input type="text" name="a4_2" placeholder="Option B" /><br />
+                    <input type="text" name="a4_3" placeholder="Option C" /><br />
+                    <input type="text" name="a4_4" placeholder="Option D" /><br />
+                    <p>Right Answer:</p>
+                        <input type="radio" name="a4" id="a4_1" value="A"/><label class="al" for="a4_1">A</label>
+                        <input type="radio" name="a4" id="a4_2" value="B"/><label class="al" for="a4_2">B</label>
+                        <input type="radio" name="a4" id="a4_3" value="C"/><label class="al" for="a4_3">C</label>
+                        <input type="radio" name="a4" id="a4_4" value="D"/><label class="al" for="a4_4">D</label>
+                
+                <label class="ql" for="q5">Q5.</label><textarea name="q5" id="q5" rows="2" placeholder="Q5"></textarea><br />
+                    <input type="text" name="a5_1" placeholder="Option A" /><br />
+                    <input type="text" name="a5_2" placeholder="Option B" /><br />
+                    <input type="text" name="a5_3" placeholder="Option C" /><br />
+                    <input type="text" name="a5_4" placeholder="Option D" /><br />
+                    <p>Right Answer:</p>
+                        <input type="radio" name="a5" id="a5_1" value="A"/><label class="al" for="a5_1">A</label>
+                        <input type="radio" name="a5" id="a5_2" value="B"/><label class="al" for="a5_2">B</label>
+                        <input type="radio" name="a5" id="a5_3" value="C"/><label class="al" for="a5_3">C</label>
+                        <input type="radio" name="a5" id="a5_4" value="D"/><label class="al" for="a5_4">D</label>
+                
+                <label class="ql" for="q6">Q6.</label><textarea name="q6" id="q6" rows="2" placeholder="Q6"></textarea><br />
+                    <input type="text" name="a6_1" placeholder="Option A" /><br />
+                    <input type="text" name="a6_2" placeholder="Option B" /><br />
+                    <input type="text" name="a6_3" placeholder="Option C" /><br />
+                    <input type="text" name="a6_4" placeholder="Option D" /><br />
+                    <p>Right Answer:</p>
+                        <input type="radio" name="a6" id="a6_1" value="A"/><label class="al" for="a6_1">A</label>
+                        <input type="radio" name="a6" id="a6_2" value="B"/><label class="al" for="a6_2">B</label>
+                        <input type="radio" name="a6" id="a6_3" value="C"/><label class="al" for="a6_3">C</label>
+                        <input type="radio" name="a6" id="a6_4" value="D"/><label class="al" for="a6_4">D</label>
+                
+                <label class="ql" for="q7">Q7.</label><textarea name="q7" id="q7" rows="2" placeholder="Q7"></textarea><br />
+                    <input type="text" name="a7_1" placeholder="Option A" /><br />
+                    <input type="text" name="a7_2" placeholder="Option B" /><br />
+                    <input type="text" name="a7_3" placeholder="Option C" /><br />
+                    <input type="text" name="a7_4" placeholder="Option D" /><br />
+                    <p>Right Answer:</p>
+                        <input type="radio" name="a7" id="a7_1" value="A"/><label class="al" for="a7_1">A</label>
+                        <input type="radio" name="a7" id="a7_2" value="B"/><label class="al" for="a7_2">B</label>
+                        <input type="radio" name="a7" id="a7_3" value="C"/><label class="al" for="a7_3">C</label>
+                        <input type="radio" name="a7" id="a7_4" value="D"/><label class="al" for="a7_4">D</label>
+                
+                <label class="ql" for="q8">Q8.</label><textarea name="q8" id="q8" rows="2" placeholder="Q8"></textarea><br />
+                    <input type="text" name="a8_1" placeholder="Option A" /><br />
+                    <input type="text" name="a8_2" placeholder="Option B" /><br />
+                    <input type="text" name="a8_3" placeholder="Option C" /><br />
+                    <input type="text" name="a8_4" placeholder="Option D" /><br />
+                    <p>Right Answer:</p>
+                        <input type="radio" name="a8" id="a8_1" value="A"/><label class="al" for="a8_1">A</label>
+                        <input type="radio" name="a8" id="a8_2" value="B"/><label class="al" for="a8_2">B</label>
+                        <input type="radio" name="a8" id="a8_3" value="C"/><label class="al" for="a8_3">C</label>
+                        <input type="radio" name="a8" id="a8_4" value="D"/><label class="al" for="a8_4">D</label>
+                
+                <label class="ql" for="q9">Q9.</label><textarea name="q9" id="q9" rows="2" placeholder="Q9"></textarea><br />
+                    <input type="text" name="a9_1" placeholder="Option A" /><br />
+                    <input type="text" name="a9_2" placeholder="Option B" /><br />
+                    <input type="text" name="a9_3" placeholder="Option C" /><br />
+                    <input type="text" name="a9_4" placeholder="Option D" /><br />
+                    <p>Right Answer:</p>
+                        <input type="radio" name="a9" id="a9_1" value="A"/><label class="al" for="a9_1">A</label>
+                        <input type="radio" name="a9" id="a9_2" value="B"/><label class="al" for="a9_2">B</label>
+                        <input type="radio" name="a9" id="a9_3" value="C"/><label class="al" for="a9_3">C</label>
+                        <input type="radio" name="a9" id="a9_4" value="D"/><label class="al" for="a9_4">D</label>
+                
+                <label class="ql" for="q10">Q10.</label><textarea name="q10" id="q10" rows="2" placeholder="Q10"></textarea><br />
+                    <input type="text" name="a10_1" placeholder="Option A" /><br />
+                    <input type="text" name="a10_2" placeholder="Option B" /><br />
+                    <input type="text" name="a10_3" placeholder="Option C" /><br />
+                    <input type="text" name="a10_4" placeholder="Option D" /><br />
+                    <p>Right Answer:</p>
+                        <input type="radio" name="a10" id="a10_1" value="A"/><label class="al" for="a10_1">A</label>
+                        <input type="radio" name="a10" id="a10_2" value="B"/><label class="al" for="a10_2">B</label>
+                        <input type="radio" name="a10" id="a10_3" value="C"/><label class="al" for="a10_3">C</label>
+                        <input type="radio" name="a10" id="a10_4" value="D"/><label class="al" for="a10_4">D</label>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <script type="text/javascript" charset="utf-8">
+            for (t=0; t<10; t++){
+                document.getElementsByTagName("textarea")[t].setAttribute("required", "true");
+            };
+            for (i=0; i<80; i++){
+                document.getElementsByTagName("input")[i].setAttribute("required", "true");
+            };
+            
+            function login() {
+                var un = document.getElementById("username").value;
+                var pw = document.getElementById("password").value;
+                if (un == "Sushil" && pw == "jnvQadmin") {
+                    document.getElementById("loginDiv").style.display="none";
+                    document.getElementById("mainDiv").style.display="block";
+                    
+                } else {
+                    swal({
+                        title: "Details are invalid",
+                        icon: "error",
+                        });
+                };
+            }
+        </script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    </body>
+</html>
