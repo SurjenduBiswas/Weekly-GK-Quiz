@@ -1,0 +1,43 @@
+{
+  "name": "Weekly General Knowledge Quiz",
+  "short_name": "WGK Quiz",
+  "start_url": "index.php",
+  "display": "standalone",
+  "background_color": "#FFAEDB",
+  "theme_color": "#FF8BC9",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "ico.png",
+      "type": "image/png", "sizes": "72x72"
+    },
+    {
+      "src": "ico.png",
+      "type": "image/png", "sizes": "96x96"
+    },
+    {
+      "src": "ico.png",
+      "type": "image/png","sizes": "128x128"
+    },
+    {
+      "src": "ico.png",
+      "type": "image/png", "sizes": "144x144"
+    },
+    {
+      "src": "ico.png",
+      "type": "image/png", "sizes": "152x152"
+    },
+    {
+      "src": "ico.png",
+      "type": "image/png", "sizes": "192x192"
+    },
+    {
+      "src": "ico.png",
+      "type": "image/png", "sizes": "384x384"
+    },
+    {
+      "src": "ico.png",
+      "type": "image/png", "sizes": "512x512"
+    }
+  ]
+}
